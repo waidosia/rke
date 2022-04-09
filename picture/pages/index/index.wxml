@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view >
+    <view style="width: 100%; height: 200px;margin-left: 35px;">
+        当前密钥是：
+        <view style="letter-spacing:30px;font-size: 50px;">{{passwd}}</view>
+    </view>
+    <!--for循环遍历用于存储图片地址和时间的地址-->
+    <view wx:for="{{imgList}}" wx:key="key" bindtap="clickImg" data-index="{{index}}"  >
+        <!--展示图片时间-->
+        <view style="margin-left: 35px;">{{imgList[index].time}}</view> 
+        <!--展示-->
+        <view style="display:flex;justify-content: center;">
+             <image  style="width:80%;" src="{{imgList[index].url}}" ></image>
+        </view>
+    </view>
+</view>
